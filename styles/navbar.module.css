@@ -4,10 +4,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 16px;
-  padding-right: 40px;
-  background: linear-gradient(0deg, #88fff1, #6fe5ff);
-
+  padding: 0 16px;
+  background: linear-gradient(0deg, #040130, #02001f);
 }
 
 /* Left Navbar */
@@ -60,10 +58,10 @@
   width: 100%;
   height: 35px;
 
-	color: gray;
+  color: gray;
   font-size: 16px;
-	font-weight: 400;
-	letter-spacing: .8px;
+  font-weight: 400;
+  letter-spacing: 0.8px;
   font-family: var(--font-raleway);
 
   padding: 6px 10px;
@@ -81,45 +79,79 @@
 /* Right Navbar */
 .rtNav {
   display: flex;
+  justify-content: flex-end;
   align-items: center;
   flex: 1;
-}
-
-.containerUser {
-  width: 37px;
-  height: 37px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  border-radius: 50%;
-
-  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.1);
-}
-
-.userName {
-	font-family: var(--font-poppins);
-	font-size: 20px;
-	font-weight: 300;
-	color: #545454;
-	letter-spacing: 1px;
-	margin-left: 15px;
 }
 
 /* mini-Navbar */
 
 .miniNav {
-	width: 100%;
-	height: 60px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	background-color: white;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
 
-	box-shadow: 0 4px 5px 1px rgba(0, 0, 0, .1);
+  box-shadow: 0 4px 5px 1px rgba(0, 0, 0, 0.1);
 }
 
 .categories_container {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
+}
+
+/* sidebar */
+
+.sidebar {
+  width: 100%;
+  min-height: 400px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(0deg, #040130, #02001f);
+
+  box-shadow: 0px 0 12px 2px rgba(0, 0, 0, 0.5);
+
+  position: fixed;
+  top: -100%;
+
+  transition: 300ms ease-in-out;
+
+  z-index: 1000;
+}
+
+.sideNavigation {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.iconMenu {
+  padding: 1rem;
+}
+
+@media (max-width:1200px) {
+  .mdNav {
+    display: flex;
+    flex: 2;
+  }
+}
+
+@media (max-width:1024px) {
+  .mdNav {
+    display: none;
+  }
+
+  .miniNav {
+    overflow-x: scroll;
+  }
+
+}
+
+@media (max-width:600px) {
+  .ltNav {
+    flex: 3;
+  }
 }
